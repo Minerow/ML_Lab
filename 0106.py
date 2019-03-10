@@ -1,0 +1,48 @@
+def Max(a,b):
+    if(a>b):
+        c=a
+    else:
+        c=b
+    return c
+x=eval(input("请输入数字x："))
+y=eval(input("请输入数字y："))
+z=eval(input("请输入数字z："))
+w=eval(input("请输入数字w："))
+a=Max(x,y)
+if(a==x):
+    if(a>z):
+        b=Max(y,z)
+        if(b==y):
+            c=z
+        else:
+            c=y
+    else:
+        a=z
+        b=x
+        c=y
+else:
+    if(a>z):
+        b=Max(x,z)
+        if(b==x):
+            c=z
+        else:
+            c=x
+    else:
+        a=z
+        b=y
+        c=x
+if(w>a):
+    d=c
+    c=b
+    b=a
+    a=w
+elif(w>b):
+    d=c
+    c=b
+    b=w
+elif(w>c):
+    d=c
+    c=w
+else:
+    d=w
+print("四个数从大到小排列为{}，{}，{}，{}".format(a,b,c,d))
