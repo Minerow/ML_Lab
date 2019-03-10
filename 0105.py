@@ -1,0 +1,33 @@
+def Max(a,b):
+    if(a>b):
+        c=a
+    else:
+        c=b
+    return c
+x=eval(input("请输入数字x："))
+y=eval(input("请输入数字y："))
+z=eval(input("请输入数字z："))
+a=Max(x,y)
+if(a==x):
+    if(a>z):
+        b=Max(y,z)
+        if(b==y):
+            c=z
+        else:
+            c=y
+    else:
+        a=z
+        b=x
+        c=y
+else:
+    if(a>z):
+        b=Max(x,z)
+        if(b==x):
+            c=z
+        else:
+            c=x
+    else:
+        a=z
+        b=y
+        c=x
+print("三个数从小到大排列为{}，{}，{}".format(c,b,a))
